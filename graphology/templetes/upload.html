@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload</title>
+    <link rel="stylesheet" href="/static/upload.css">
+</head>
+
+<header>
+        
+    <div class="navbar" id="navbar">
+        <div id="naam">
+            <a href="{% url 'home' %}"> WराईटHOICE </a> 
+         </div>
+              
+
+    </div>
+</header>
+
+
+<body>
+    
+    <div class="upload-container">
+        <form>
+            {% csrf_token %}
+            {{form}}
+        <div id="drop-area">
+            Drag and drop files here or click to upload
+        </div>
+          
+          <input type="file" id="file-input" multiple>
+          <label for="file-input" id="file-label">Upload</label>
+          <p id="errorMessage" style="color: red; display: none;">Please upload an image.</p>
+          
+          <div id="file-info"></div>  
+          
+        
+        </form>
+        
+        
+    </div>
+
+
+    <script src="/static/upload.js"></script>
+</body>
+</html>

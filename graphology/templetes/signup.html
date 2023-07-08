@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/stylessignup.css">
+    <title>SignUp Page</title>
+</head>
+<header>
+        
+    <div class="navbar" id="navbar">
+        <div id="naam">
+            <a href="signup.html"> WराईटHOICE </a> 
+         </div>
+              
+
+    </div>
+</header>
+
+
+<body>
+    
+
+    <!-- <h1 id="heading">Login to try</h1> -->
+    
+    <div class="center">
+
+      <div class="signup_link">          
+        <p >Don't have Account? <h1 style="display: inline; font-size: 30px;">SignUp</h1></p>
+    
+        
+        <form method="post">
+          {% csrf_token %}
+            <div class="txt_field">
+                <input type="text" required name="username">
+                <span></span>
+                <label> Username </label>
+            </div>
+
+
+            <div class="txt_field">
+              <input id="password" type="password" required name="password1">
+              <span></span>
+              <label>Password</label>
+            </div>
+
+            <div class="txt_field">
+              <input id="confirm_password" type="password" required name="password2">
+              <span></span>
+              <label>Confirm Password</label>
+              <span id="password_message"></span>
+            </div>
+
+
+            <div class="txt_field">
+              <input type="email" required>
+              <span></span>
+              <label> Email Id </label>
+            </div>
+
+            <!-- <div class="pass">Forgot Password? </div> -->
+
+            <input type="submit" value="Sign up">
+           <div id="acc">
+              <a href="{% url 'login' %}">Already Have Account?</a> 
+
+           </div>
+        </form>
+        
+
+    </div>
+    
+    <script>
+      const passwordInput = document.getElementById('password');
+      const confirmInput = document.getElementById('confirm_password');
+      const messageSpan = document.getElementById('password_message');
+    
+      function checkPassword() {
+        const password = passwordInput.value;
+        const confirm = confirmInput.value;
+    
+        if (password === confirm) {
+          messageSpan.textContent = 'Passwords match';
+          messageSpan.style.color = 'green';
+        } else {
+          messageSpan.textContent = 'Passwords do not match';
+          messageSpan.style.color = 'red';
+        }
+      }
+    
+      confirmInput.addEventListener('keyup', checkPassword);
+    </script>
+    
+</body>
+</html>

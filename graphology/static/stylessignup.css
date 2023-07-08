@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@800&display=swap');
+
+body{
+    margin:0;
+    padding:0;
+    font-family:montserrat;
+    background: linear-gradient(#9A8C98, #d1bab5);
+    height:100vh;
+    overflow: hidden;    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity:1;
+}
+#heading{
+    text-align: center;
+    color:rgb(230, 223, 235);
+    
+    
+}
+
+
+.navbar{
+    position: fixed;
+    top:0;
+    height:80px;
+    width:100vw;
+    display:flex;
+    align-items:center;   
+    background-color:transparent;
+    color:purple;
+    padding:10px;    
+    transition:top 0.3s ease-it-out;
+    
+    
+}
+.navbar.show{
+    top:0;
+}
+
+
+.navbar a{
+    text-decoration:none;
+    margin-right: 180px;
+    color:white;
+    padding-top:20px;
+    padding-bottom:30px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 2px solid transparent;
+    
+}
+
+#naam a{
+    margin-left:30px;
+    font-size: 30px;
+    padding-right:60px;
+    font-family: 'Wix Madefor Display', sans-serif;
+
+  }
+
+.navbar a:hover{
+    color:#e4c4bd;
+    transform: scale(1.05);
+}
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* Additional styles for the fixed navbar */
+  }
+  
+
+.center{
+    position:absolute;
+    top:60%;
+    left:50%;
+    transform :translate(-50%, -70%)  ;
+    width:400px;
+    background:white;
+    border-radius:30px;
+    padding: 15px;
+
+}
+.center h1{
+    text-align: center;
+    padding:0 0 10px 0;
+    /* border-bottom: 1px solid silver; */
+    
+}
+
+
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom:2px solid #7d7878;
+    margin: 30px 0px;
+}
+
+.txt_field input{
+    width:100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size:16px;
+    border:none;
+    background: none;
+    outline: none;
+}
+.txt_field label{
+    position: absolute;
+    top: 50%;
+     left:5px;
+    color:#ad9e9e;
+    transform: translateY(-60%)  ;
+    font-size:16px;
+    pointer-events:none;
+    transition:.25s ;
+}
+
+.txt_field span::before{
+    content:'';
+    position: absolute;
+    top: 40px;
+    left:0;
+    width: 100%;
+    height: 1.5px;
+    background:#dcbfbf;
+    transition:0.5s;
+
+}
+
+.txt_field input:focus~label,
+.txt_field input:valid~label{
+    top:-5px;
+    color:#dcbfbf;
+}
+
+.txt_field input:focus~span::before,
+.txt_field input:valid~span::before{
+    width:100%;
+}
+
+.pass{
+    margin: -5px 0 20px 5px;
+    color:#ed2727;
+    cursor:pointer;
+}
+
+.pass:hover{
+    text-decoration:underline;
+}
+
+input[type="submit"]{
+    width:100%;
+    height:40px;
+    border:1px solid;
+    background:#a09292;
+    cursor:pointer;
+    border-radius:40px;
+    font-size:18px;
+    color:rgb(255, 255, 255);
+    font-weight:500;
+    outline:none;
+    
+}
+
+input[type="submit"]:hover{
+    border-color:#000000;
+    transition:0.25s;
+}
+
+.signup_link{
+    margin:30px 0 ;
+    /* text-align:center; */
+    font-size:16px;
+    color:#8e8787;
+    
+
+}
+
+.signup_link a{
+    color:#907e7e;
+    text-decoration: none;
+    
+}
+
+.signup_link a:hover{
+    text-decoration: underline;
+}
+
+
+.acc{
+    padding-top:20px;
+}

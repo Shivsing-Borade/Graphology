@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap');
+
+
+  *{
+      padding:0px;
+      margin:0px;
+      align-items: center;
+  }
+  
+  
+.navbar{
+    position: fixed;
+    top:0;
+    left: 0;
+    height:80px;
+    width:100vw;
+    display:flex;
+    align-items:center;   
+    background-color:transparent;
+    color:purple;
+    padding:10px;    
+    transition:top 0.3s ease-it-out;
+    
+    
+}
+.navbar.show{
+    top:0;
+}
+
+
+.navbar a{
+    text-decoration:none;
+    margin-right: 180px;
+    color:white;
+    padding-top:20px;
+    padding-bottom:30px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 2px solid transparent;
+    
+}
+
+#naam a{
+    margin-left:10px;
+    font-size: 30px;
+    padding-right:60px;
+    font-family: 'Wix Madefor Display', sans-serif;
+
+  }
+
+.navbar a:hover{
+    color:#e4c4bd;
+    transform: scale(1.05);
+}
+
+
+#name :hover {
+    color: #000000;
+    transform: scale(1.05);
+    background-color:transparent;
+    border:none;
+  }
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* Additional styles for the fixed navbar */
+  }
+  
+  body {
+      text-align: center;    
+      font-family: Arial, sans-serif;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color:#C9ADA7;;
+      margin: 5%;
+      margin-top: 50px;
+      
+  }
+  
+  .upload-container {
+      align-items: center;
+      background-color:white;
+      padding: 40px;
+      height:540px;
+      border-radius: 50px;
+      box-shadow: 0 0 10px rgba(52, 3, 60, 0.1);
+      max-width: 70%;
+      margin-left: 13%;
+      margin-top:20px;
+      
+  }
+  .upload{
+      align-items:center;
+      border-style:dotted;
+      border-color: #C9ADA7;
+      margin-top:30px;
+      margin-left:150px;
+      border-radius: 7px;;
+      width:700px;
+      height:400px;
+  }
+  
+  #drop-area {
+    width: 300px;
+    height: 200px;
+    margin-top:50px;
+    border: 2px dashed #ccc;
+    line-height: 200px;
+    color: #666;
+    margin: 50px auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  #drop-area.highlight {
+    border-color: #00bcd4;
+    color: #00bcd4;
+  }
+
+  #file-input {
+    display: none;
+  }
+
+  #file-label {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #00bcd4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  #file-label.hide {
+    display: none;
+  }
+
+  #file-info {
+    display: none;
+    margin-top: 20px;
+  }
+
+  #file-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  #file-info p {
+    margin-top: 10px;
+  }
+
+  #drop-area.hide {
+    display: none;
+  }
+  
+  
+
